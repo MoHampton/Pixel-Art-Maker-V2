@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="grey lighten-3">
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-sm navbar-light white scrolling-navbar top-nav-collapse">
+    <div class="container-fluid">
+      <!-- Brand -->
+      <a class="navbar-brand waves-effect" href="https://mohampton.github.io/" target="_blank">
+                    <img src="https://mohampton.github.io/Pixel-Art-Maker-V2/mo1.png" height="100" width="100">
+                </a>
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" data-toggle="modal" data-target="#instructionsModal">
+                <a class="nav-link" href="#">Instructions</a>
+            </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Grid Size</a>
+            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdow-item">
+                <form id="sizePicker">
+                  <div class="form-group row">
+                    <label for="example-number-input" class="col-2 col-form-label">Grid Height:</label>
+                    <div class="col-10">
+                      <input class="form-control" type="number" id="inputHeight" name="height" min="1" value="15">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="example-number-input" class="col-2 col-form-label">Grid Width:</label>
+                    <div class="col-10">
+                      <input class="form-control" type="number" min="1" value="15" name="width" id="inputWidth">
+                    </div>
+                  </div>
+                  <button type="button" id="submit" value="submit" class="btn rgba-indigo-strong" data-toggle="dropdown">Submit</button>
+                </form>
+              </a>
+            </div>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pick A Color</a>
+            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item">Color:  <input type="color" id="colorPicker"></a>
+
+            </div>
+          </li>
+        </ul>
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+            <a href="https://www.linkedin.com/in/mohampton/" class="nav-link waves-effect" target="_blank">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://twitter.com/MoxieHampton" class="nav-link waves-effect" target="_blank">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://github.com/MoHampton/Pixel-Art-Maker-V2" class="nav-link border border-light rounded waves-effect" target="_blank">
+                                <i class="fa fa-github mr-2"></i>Pixel GitHub
+                            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+
+  <h1 class="animated tada">Pixel Art Maker</h1>
+  <h2>Canvas</h2>
+  <table id="pixelCanvas"></table>
+  
+  <!-- Modal -->
+<div class="modal fade" id="instructionsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center" id="exampleModalLabel"><strong>Pixel Art Maker Instructions</strong></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-left">
+              <li><strong>Grid Size:</strong> Choose the canvas grid size for your new creation. (Default: 15 x 15)</li><br>
+              <li><strong>Pick A Color:</strong> Go with the Midas touch. (Default: Gold) Or pick a new color.</li><br>
+              <li><strong>Draw:</strong></li>
+                <ul>
+                  <li><strong>Paint:</strong> Paint a pixel with a single-click. Make a paint stroke by pressing the mouse down and dragging.<br>  <u>Careful:</u> the stroke will continue until the mouse is clicked again.</li>
+              <li><strong>Erase:</strong> Everyone makes mistakes.  Double-click the pixel to remove colors.</li><br>
+              </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn rgba-indigo-strong" data-dismiss="modal">Got It!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+  
+  
+  <script src="designs.js"></script>
+</body>
+</html>
