@@ -21,15 +21,9 @@ h2:first-of-type {
   margin-top: 0.5em;
   color: #ccc;
 }
-
-nav {
-  padding: 0px !important;
-  margin: 0px !important;
-}
-
-.container-fluid {
-  padding: 0px !important;
-  margin: 0px !important;
+nav .container-fluid, .container-fluid .navbar-brand, .container-fluid img, .container-fluid .navbar-brand{
+ padding: 0px;
+ margin: 0px;
 }
 
 li {
