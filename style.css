@@ -21,17 +21,55 @@ h2:first-of-type {
   margin-top: 0.5em;
   color: #ccc;
 }
-nav .container-fluid, .container-fluid .navbar-brand, .container-fluid img, .container-fluid .navbar-brand{
- padding: 0px;
- margin: 0px;
+
+nav,
+.container-fluid .navbar-brand,
+.container-fluid {
+  padding: 0px !important;
+  margin: 0px !important;
 }
 
-li {
+.nav-item i {
+  color: rgba(63, 81, 181, 0.7) !important;
+}
+
+.options button:hover {
+  color: rgba(63, 81, 181, 0.7) !important;
+  border-color: rgba(63, 81, 181, 0.7) !important;
+}
+
+.modal-header {
+  color: #fafafa !important;
+}
+
+.modal-body strong {
+  text-decoration: underline;
+}
+
+.dropdown-item i {
+  margin: 5px;
+}
+
+#gridMenu {
+  min-width: 200px;
+}
+
+#sizePicker {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+#sizePicker input {
+  margin-left: 5px;
+}
+.center {
+  margin: auto;
+  display: block;
+}
+
+li,
+.modal li {
   list-style-type: none;
-}
-
-.fa {
-    color: rgba(63, 81, 181, 0.7);
 }
 
 table,
@@ -43,7 +81,7 @@ td {
 
 table {
   border-collapse: collapse;
-  box-shadow: 5px 5px 20px; 
+  box-shadow: 5px 5px 20px;
   margin: 0 auto;
 }
 
@@ -61,4 +99,16 @@ td:hover {
 
 input[type="number"] {
   width: 6em;
+}
+
+.removeGrid {
+  border: 0px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
