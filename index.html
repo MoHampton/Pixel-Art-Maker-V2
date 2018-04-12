@@ -88,7 +88,7 @@
     <button id="clearGrid" type="button" class="btn btn-outline-mdb-color btn-sm waves-effect" data-toggle="tooltip" data-placement="bottom" title="Remove Art or Double-Click the Pixel to Erase"> Clear </button>
     <button id="removeGrid" type="button" class="btn btn-outline-mdb-color btn-sm waves-effect" data-toggle="tooltip" data-placement="bottom" title="Remove/Add Grid Lines"> Grid </button>
     <button id="preview" type="button" class="btn btn-outline-mdb-color btn-sm waves-effect"> Preview </button>
-    <a type="button" class="btn rgba-indigo-strong btn-sm waves-effect disabled" id="downloadArt" data-toggle="tooltip" data-placement="bottom" title="Must Select Preview First"> Download <i class="fa fa-download"></i></a>
+    <span data-toggle="tooltip" data-placement="bottom" title="Please Select Preview First"><a type="button" class="btn indigo btn-sm waves-effect disabled" id="downloadArt"> Download <i class="fa fa-download"></i></a></span>
   </div>
 
   <h2>Canvas</h2>
@@ -112,8 +112,16 @@
           <li><strong>Draw:</strong></li>
           <ul>
             <li><strong>Paint:</strong> Paint a pixel with a single-click. Make a paint stroke by pressing the mouse down and dragging.<br> <u>Careful:</u> the stroke will continue until the mouse is clicked again.</li>
-            <li><strong>Erase:</strong> Everyone makes mistakes. Double-click the pixel to remove colors.</li><br>
+            <li><strong>Erase:</strong> <i>Everyone makes mistakes.</i> Double-click the pixel to remove colors.</li><br>
           </ul>
+          <hr>
+          <li><strong>Canvas:</strong></li>
+          <ul>
+            <li><strong>Clear:</strong> Remove color from the grid...but keep the grid.</li>
+            <li><strong>Grid:</strong> Remove/Add grid lines.</li>
+            <li><strong>Preview:</strong> Make your artwork center stage. Preview your masterpiece.</li>
+            <li><strong>Download:</strong> Download a .png version of your art - Go ahead, print it! (You must view a preview prior to downloading.)</li>
+            </ul>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn rgba-indigo-strong" data-dismiss="modal">Got It!</button>
@@ -142,11 +150,11 @@
     </div>
   </div>
   <br><br>
-  <footer class="page-footer rgba-indigo-strong pt-2 mt-1">
+  <footer class="rgba-indigo-strong font-small">
     <!--Copyright-->
-    <div class="footer-copyright text-center">
+    <div class="footer-copyright text-center font-small">
       <a href="https://mohampton.github.io/" target="_blank">
-                    <img src="https://mohampton.github.io/Pixel-Art-Maker-V2/mo2.png" height="75" width="75">
+                    <img src="https://mohampton.github.io/Pixel-Art-Maker-V2/mo2.png" height="50" width="50">
                 </a> © 2018 Copyright:
     </div>
     <!--/.Copyright-->
