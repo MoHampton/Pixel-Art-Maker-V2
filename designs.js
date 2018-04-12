@@ -1,8 +1,10 @@
 $(document).ready(function() {
   let artwork = $("#pixelCanvas");
   let buildCanvas = "";
-  //Opens instructions modal
-  $('#instructionsModal').modal();
+  //Opens instructions modal after 3 seconds
+    setTimeout(function(){ 
+        $('#instructionsModal').modal(); 
+    }, 3000);
   //Sets the default color for the color picker
   $("#colorPicker").val("#c6a530");
   let isClicked = false;
