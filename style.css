@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  z-index: 15;
 }
 
 h1 {
@@ -113,4 +114,6 @@ footer {
   box-shadow: 5px 5px 20px;
   text-align: center;
   max-height: 50px !important;
+  z-index: -1;
+  color: lightgray;
 }
